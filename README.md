@@ -24,3 +24,8 @@ A modern and responsive AI chatbot interface built using HTML, CSS, and JavaScri
 - JavaScript
 
 ---
+## Setup
+1. openrouter.ai থেকে free API key নাও
+2. script.js এর ১৬ নম্বর line এ বসাও:
+   const API_KEY = "তোমার_key";
+3. index.html open করো
