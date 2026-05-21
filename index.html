@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Chatbot</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Remix Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+
+  <!-- Fonts: Outfit (display) + DM Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- Background blobs -->
+  <div class="bg-blob blob-1"></div>
+  <div class="bg-blob blob-2"></div>
+  <div class="bg-blob blob-3"></div>
+
+  <h1 class="main-tag">
+    <span class="tag-icon"><i class="ri-brain-2-fill"></i></span>
+    NeuralChat
+  </h1>
+
+  <div class="chatbot-popup">
+
+    <!-- ── HEADER ── -->
+    <div class="chat-header">
+
+      <div class="header-info">
+        <div class="avatar-ring">
+          <i class="ri-brain-2-fill"></i>
+          <span class="online-dot"></span>
+        </div>
+        <div>
+          <h2 class="logo-text">NeuralChat</h2>
+          <span class="status-text">Online · Ready to help</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="settings-button" title="Settings">
+          <i class="ri-settings-3-line"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- ── CHAT BODY ── -->
+    <div class="chat-body">
+
+      <div class="bot-message">
+        <div class="bot-avatar">
+          <i class="ri-brain-2-fill"></i>
+        </div>
+        <div class="message-text">
+          Hey there! 👋<br>
+          I'm <strong>NeuralChat</strong> — your AI assistant.<br>
+          What can I help you with today?
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ── SETTINGS PANEL ── -->
+    <div class="settings-panel">
+
+      <div class="settings-header">
+        <h3>Settings</h3>
+        <button id="close-settings" title="Close">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="settings-options">
+
+        <div class="setting-item new-chat">
+          <i class="ri-chat-new-line"></i>
+          <span>New Chat</span>
+        </div>
+
+        <div class="setting-group-label">Appearance</div>
+
+        <div class="setting-item dark-mode-btn">
+          <i class="ri-moon-line"></i>
+          <span>Dark Mode</span>
+        </div>
+
+        <div class="setting-item light-mode-btn">
+          <i class="ri-sun-line"></i>
+          <span>Light Mode</span>
+        </div>
+
+        <div class="setting-group-label">Preferences</div>
+
+        <div class="setting-item notification-btn">
+          <i class="ri-notification-3-line"></i>
+          <span>Notifications</span>
+          <span class="badge badge-on">ON</span>
+        </div>
+
+        <div class="setting-item voice-mode-btn">
+          <i class="ri-mic-line"></i>
+          <span>Voice Input</span>
+          <span class="badge badge-on">ON</span>
+        </div>
+
+        <div class="setting-item clear-chat-btn">
+          <i class="ri-delete-bin-6-line"></i>
+          <span>Clear Chats</span>
+        </div>
+
+        <div class="setting-group-label">Info</div>
+
+        <!-- ABOUT -->
+        <div class="setting-item about-ai-btn">
+          <div class="about-header">
+            <div style="display:flex;align-items:center;gap:10px;">
+              <i class="ri-information-line"></i>
+              <span>About NeuralChat</span>
+            </div>
+            <i class="ri-arrow-down-s-line about-arrow"></i>
+          </div>
+          <div class="about-content">
+            <p><strong>NeuralChat v2.0</strong></p>
+            <p>Built with HTML, CSS &amp; JavaScript 🚀</p>
+            <p>Features:</p>
+            <ul>
+              <li>AI Chat (OpenRouter)</li>
+              <li>Voice Input</li>
+              <li>File &amp; Image Upload</li>
+              <li>Dark / Light Mode</li>
+              <li>Smooth Settings Panel</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- END SETTINGS PANEL -->
+
+    <!-- ── FOOTER ── -->
+    <div class="chat-footer">
+
+      <form action="#" class="chat-form">
+
+        <div class="file-preview-container"></div>
+
+        <div class="input-wrapper">
+
+          <textarea
+            placeholder="Ask me anything…"
+            class="message-input"
+            rows="1"
+            required
+          ></textarea>
+
+          <div class="chat-controls">
+
+            <button type="button" id="mic-button" title="Voice input">
+              <i class="ri-mic-2-fill"></i>
+            </button>
+
+            <input type="file" id="file-input" hidden />
+            <button type="button" id="file-upload" title="Attach file">
+              <i class="ri-attachment-2"></i>
+            </button>
+
+            <button type="submit" id="send-message" title="Send">
+              <i class="ri-arrow-up-line"></i>
+            </button>
+
+          </div>
+
+        </div>
+
+        <p class="footer-hint">NeuralChat can make mistakes. Verify important info.</p>
+
+      </form>
+
+    </div>
+
+  </div><!-- end .chatbot-popup -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
