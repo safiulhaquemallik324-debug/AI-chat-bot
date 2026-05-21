@@ -13,7 +13,7 @@ const micButton           = document.querySelector("#mic-button");
 
 // ── API CONFIG ──────────────────────────────────────────────────────────────
 // 🔑 তোমার OpenRouter API key এখানে বসাও
-const API_KEY = "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";
+const API_KEY = prompt("Enter your OpenRouter API Key");
 const API_URL = "https://openrouter.ai/api/v1/chat/completions";
 
 // ── USER DATA ────────────────────────────────────────────────────────────────
@@ -133,7 +133,7 @@ const generateBotResponse = async (incomingMessageDiv) => {
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
-        "Authorization":  `Bearer ${API_KEY}`,
+       Authorization: `Bearer ${API_KEY}`,
         "Content-Type":   "application/json",
         "HTTP-Referer":   window.location.href,
         "X-Title":        "NeuralChat"
